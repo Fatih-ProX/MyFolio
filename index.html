@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shah Rukh Syed - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- SweetAlert2 for Alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyPortfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles-background"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-name">Shah Rukh Syed</h1>
+                <p class="hero-description">
+                    <span id="job-role"></span><span class="cursor"></span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-glow">Hire Me</a>
+                    <a href="#projects" class="btn btn-outline-light btn-glow">View Portfolio</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Profile Image -->
+                <div class="col-lg-4">
+                    <div class="profile-card glass-card">
+                        <img src="profile.jpg" alt="Shah Rukh Syed" class="profile-img">
+                        <div class="glow-border"></div>
+                    </div>
+                </div>
+                <!-- About Me Content -->
+                <div class="col-lg-8">
+                    <div class="glass-card">
+                        <h2 class="section-title neon-text">IT Solution Architect</h2>
+                        <p class="text-white">
+                            Certified ServiceNow Administrator & Full-Stack Developer with 2+ years of experience in delivering enterprise IT solutions. Specialized in workflow automation and cloud infrastructure optimization.
+                        </p>
+                        <!-- Achievements Grid -->
+                        <div class="achievements-grid">
+                            <div class="achievement-card hover-glow">
+                                <i class="fas fa-trophy text-white"></i>
+                                <h3 class="text-white">30%</h3>
+                                <p class="text-white">Workflow Efficiency Improvement</p>
+                            </div>
+                            <div class="achievement-card hover-glow">
+                                <i class="fas fa-cogs text-white"></i>
+                                <h3 class="text-white">25%</h3>
+                                <p class="text-white">Manual Process Reduction</p>
+                            </div>
+                            <div class="achievement-card hover-glow">
+                                <i class="fas fa-certificate text-white"></i>
+                                <h3 class="text-white">7+</h3>
+                                <p class="text-white">Professional Certifications</p>
+                            </div>
+                        </div>
+                        <!-- Tech Stack -->
+                        <div class="tech-stack">
+                            <div class="tech-icon" data-tooltip="ServiceNow">
+                                <img src="servicenow-logo.png" alt="ServiceNow Logo" class="tech-logo">
+                            </div>
+                            <div class="tech-icon" data-tooltip="Python">
+                                <i class="fab fa-python text-white"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="JavaScript">
+                                <i class="fab fa-js text-white"></i>
+                            </div>
+                            <div class="tech-icon" data-tooltip="Cloud">
+                                <i class="fas fa-cloud text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Education</h2>
+            <div class="timeline">
+                <!-- Master's -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">Jan 2023 – Sep 2024</div>
+                    <h3 class="timeline-title">Master of Science in Information Technology</h3>
+                    <div class="timeline-institution">University of the Cumberlands</div>
+                </div>
+                <!-- Bachelor's -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">2018 – 2022</div>
+                    <h3 class="timeline-title">Bachelor of Technology, Computer Science</h3>
+                    <div class="timeline-institution">K L University</div>
+                    <ul class="timeline-details">
+                        <li>CGPA: 9.22</li>
+                    </ul>
+                </div>
+                <!-- Intermediate -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">2016 – 2018</div>
+                    <h3 class="timeline-title">Telangana State Board of Intermediate Education</h3>
+                    <div class="timeline-institution">Narayana Jr. College</div>
+                    <ul class="timeline-details">
+                        <li>Secured 96.8%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Professional Experience</h2>
+            <div class="timeline">
+                <!-- Freelance -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">AUG 2023 - DEC 2024</div>
+                    <h3 class="timeline-title">Freelance ServiceNow Developer</h3>
+                    <ul class="timeline-details">
+                        <li>Designed centralized Service Portal for TennCare workers</li>
+                        <li>Developed 15+ custom portal pages</li>
+                        <li>Implemented secure data handling with encryption</li>
+                    </ul>
+                </div>
+                <!-- NewRocket Full-time -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">Jun 2022 – Aug 2023</div>
+                    <h3 class="timeline-title">Associate Software Engineer</h3>
+                    <div class="timeline-institution">NewRocket</div>
+                    <ul class="timeline-details">
+                        <li>Improved workflow efficiency by 30% through custom applications</li>
+                        <li>Automated tasks reducing manual effort by 25%</li>
+                        <li>Implemented ITSM/ITOM solutions for enterprise clients</li>
+                    </ul>
+                </div>
+                <!-- Internships -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-date">Sep 2021 – Feb 2022</div>
+                    <h3 class="timeline-title">Software Intern</h3>
+                    <div class="timeline-institution">Service Stack Technologies</div>
+                    <ul class="timeline-details">
+                        <li>Developed web applications using Python/Django</li>
+                        <li>Conducted code reviews and quality improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Projects</h2>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">Service Portal Development</h3>
+                        <p class="project-overview">
+                            Designed and implemented a centralized Service Portal for TennCare workers and partners.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>15+ custom portal pages</li>
+                                <li>Custom widgets for user access management</li>
+                                <li>Encryption/decryption for secure data handling</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">UI Builder Customization</h3>
+                        <p class="project-overview">
+                            Developed custom UI components and pages using ServiceNow's UI Builder.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Custom UI components for IT asset management</li>
+                                <li>Drag-and-drop interface for rapid development</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">UI Builder</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Skills</h2>
+            <div class="row g-4">
+                <!-- Web Development -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Web Development</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge" data-progress="95">
+                                <div class="pie-chart">
+                                    <span>95%</span>
+                                </div>
+                                <p>HTML/CSS</p>
+                            </div>
+                            <div class="skill-badge" data-progress="90">
+                                <div class="pie-chart">
+                                    <span>90%</span>
+                                </div>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Tools</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge" data-progress="95">
+                                <div class="pie-chart">
+                                    <span>95%</span>
+                                </div>
+                                <p>ServiceNow</p>
+                            </div>
+                            <div class="skill-badge" data-progress="85">
+                                <div class="pie-chart">
+                                    <span>85%</span>
+                                </div>
+                                <p>Git</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title neon-text text-center mb-5">Contact Me</h2>
+            <div class="row g-4">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="contact-form glass-card hover-glow">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-glow">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="info-card glass-card hover-glow">
+                            <i class="fas fa-envelope"></i>
+                            <p>shahrukh@example.com</p>
+                        </div>
+                        <div class="info-card glass-card hover-glow">
+                            <i class="fas fa-phone"></i>
+                            <p>+91 9110344452</p>
+                        </div>
+                        <div class="info-card glass-card hover-glow">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Spring Hill, Tennessee, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Column 1: Logo & Short Bio -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <img src="logo.png" alt="Logo" class="footer-logo">
+                        <p class="footer-bio">
+                            A passionate IT professional with expertise in ServiceNow development, web development, and cloud solutions. Let's build something amazing together!
+                        </p>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Column 3: Contact Information -->
+                <div class="col-lg-4">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Contact Info</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-envelope"></i> shahrukh@example.com</li>
+                            <li><i class="fas fa-phone"></i> +91 9110344452</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright Notice -->
+            <div class="footer-bottom text-center">
+                <p class="copyright">© 2024 Shah Rukh Syed. All Rights Reserved.</p>
+            </div>
+            <!-- Scroll-to-Top Button -->
+            <div class="scroll-to-top">
+                <a href="#top" class="btn btn-primary btn-glow"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('1JmKG3aVuI9IZU1Xm'); // Your EmailJS public key
+        })();
+    </script>
+    <!-- Custom JS -->
+    <script src="script2.js"></script>
+</body>
+</html>
