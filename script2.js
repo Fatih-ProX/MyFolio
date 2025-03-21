@@ -112,9 +112,6 @@ document.querySelector('.scroll-to-top a').addEventListener('click', (e) => {
     });
 });
 
-(function () {
-    emailjs.init('1JmKG3aVuI9IZU1Xm'); // Replace with your EmailJS Public Key
-})();
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -146,3 +143,4 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
             submitBtn.innerHTML = 'Send Message';
         });
 });
+
