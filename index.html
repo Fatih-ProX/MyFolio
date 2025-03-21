@@ -1,5 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+<!-- Custom JS -->
+<script src="script2.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "1JmKG3aVuI9IZU1Xm",
+        });
+    })();
+</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +34,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">MyPortfolio</a>
+            <a class="navbar-brand" href="#">
+                <span class="brand-main">SRS</span>
+                <span class="brand-glitch">Portfolio</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,23 +56,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section class="hero-section">
         <div class="particles-background"></div>
         <div class="container">
             <div class="hero-content text-center">
                 <h1 class="hero-name">Shah Rukh Syed</h1>
-                <p class="hero-description">
-                    <span id="job-role"></span><span class="cursor"></span>
-                </p>
+
+                <!-- Fixed height container -->
+                <div class="job-role-container">
+                    <p class="hero-description">
+                        <span id="job-role"></span><span class="cursor"></span>
+                    </p>
+                </div>
+
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary btn-glow">Hire Me</a>
                     <a href="#projects" class="btn btn-outline-light btn-glow">View Portfolio</a>
                 </div>
                 <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <!-- Social icons -->
                 </div>
             </div>
         </div>
@@ -72,46 +89,57 @@
                     <div class="profile-card glass-card">
                         <img src="profile.jpg" alt="Shah Rukh Syed" class="profile-img">
                         <div class="glow-border"></div>
+                        <div class="resume-download">
+                            <a href="resume.pdf" class="btn btn-primary btn-glow" download>
+                                <i class="fas fa-download"></i> Download Resume
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- About Me Content -->
+
+                <!-- About Content -->
                 <div class="col-lg-8">
                     <div class="glass-card">
-                        <h2 class="section-title neon-text">IT Solution Architect</h2>
-                        <p class="text-white">
-                            Certified ServiceNow Administrator & Full-Stack Developer with 2+ years of experience in delivering enterprise IT solutions. Specialized in workflow automation and cloud infrastructure optimization.
+                        <h2 class="section-title neon-text">IT Solution Architect & ServiceNow Expert</h2>
+                        <p class="lead-text">
+                            🔹 Certified ServiceNow Administrator & Developer with <strong>2+ years</strong> of experience in delivering enterprise-grade IT solutions.
+                            🔹 Specialized in automating workflows, optimizing cloud infrastructure, and driving digital transformation for Fortune 500 clients.
+                            🔹 Passionate about bridging the gap between technical complexity and business value.
                         </p>
-                        <!-- Achievements Grid -->
+
+                        <!-- Key Achievements -->
                         <div class="achievements-grid">
                             <div class="achievement-card hover-glow">
-                                <i class="fas fa-trophy text-white"></i>
-                                <h3 class="text-white">30%</h3>
-                                <p class="text-white">Workflow Efficiency Improvement</p>
+                                <i class="fas fa-rocket"></i>
+                                <div class="achievement-content">
+                                    <h3>30% Faster Processes</h3>
+                                    <p>Boosted workflow efficiency for 10+ clients through automation.</p>
+                                </div>
                             </div>
                             <div class="achievement-card hover-glow">
-                                <i class="fas fa-cogs text-white"></i>
-                                <h3 class="text-white">25%</h3>
-                                <p class="text-white">Manual Process Reduction</p>
+                                <i class="fas fa-coins"></i>
+                                <div class="achievement-content">
+                                    <h3>$500k+ Saved</h3>
+                                    <p>Reduced operational costs via IT asset optimization.</p>
+                                </div>
                             </div>
                             <div class="achievement-card hover-glow">
-                                <i class="fas fa-certificate text-white"></i>
-                                <h3 class="text-white">7+</h3>
-                                <p class="text-white">Professional Certifications</p>
+                                <i class="fas fa-certificate"></i>
+                                <div class="achievement-content">
+                                    <h3>7 Certifications</h3>
+                                    <p>ServiceNow CSA, CAD, ITSM, and AWS Cloud Practitioner.</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- Tech Stack -->
-                        <div class="tech-stack">
-                            <div class="tech-icon" data-tooltip="ServiceNow">
-                                <img src="servicenow-logo.png" alt="ServiceNow Logo" class="tech-logo">
-                            </div>
-                            <div class="tech-icon" data-tooltip="Python">
-                                <i class="fab fa-python text-white"></i>
-                            </div>
-                            <div class="tech-icon" data-tooltip="JavaScript">
-                                <i class="fab fa-js text-white"></i>
-                            </div>
-                            <div class="tech-icon" data-tooltip="Cloud">
-                                <i class="fas fa-cloud text-white"></i>
+
+                        <!-- Core Expertise -->
+                        <div class="expertise">
+                            <h3 class="expertise-title">Core Expertise:</h3>
+                            <div class="expertise-list">
+                                <span class="expertise-badge">Workflow Automation</span>
+                                <span class="expertise-badge">Cloud Migration</span>
+                                <span class="expertise-badge">IT Service Management (ITSM)</span>
+                                <span class="expertise-badge">Full-Stack Development</span>
                             </div>
                         </div>
                     </div>
@@ -194,50 +222,106 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section class="projects-section">
         <div class="container">
             <h2 class="section-title neon-text text-center mb-5">Projects</h2>
             <div class="row g-4">
-                <!-- Project 1 -->
+                <!-- Service Portal Project -->
                 <div class="col-lg-6">
                     <div class="project-card glass-card hover-glow">
                         <h3 class="project-title">Service Portal Development</h3>
                         <p class="project-overview">
-                            Designed and implemented a centralized Service Portal for TennCare workers and partners.
+                            Designed and implemented a centralized Service Portal for TennCare workers and partners, providing a "one-stop shop" for accessing applications and managing access.
                         </p>
                         <div class="project-details">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li>15+ custom portal pages</li>
+                                <li>15+ custom portal pages (Dashboard, My Profile, My Requests, etc.)</li>
                                 <li>Custom widgets for user access management</li>
                                 <li>Encryption/decryption for secure data handling</li>
+                                <li>Styled portal according to design team specifications</li>
                             </ul>
                         </div>
                         <div class="project-tech">
                             <span class="tech-badge">ServiceNow</span>
                             <span class="tech-badge">JavaScript</span>
                             <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">AngularJS</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
+
+                <!-- UI Builder Project -->
                 <div class="col-lg-6">
                     <div class="project-card glass-card hover-glow">
                         <h3 class="project-title">UI Builder Customization</h3>
                         <p class="project-overview">
-                            Developed custom UI components and pages using ServiceNow's UI Builder.
+                            Developed custom UI components and pages using ServiceNow's UI Builder to enhance user experience and streamline workflows.
                         </p>
                         <div class="project-details">
                             <h4>Key Features:</h4>
                             <ul>
                                 <li>Custom UI components for IT asset management</li>
                                 <li>Drag-and-drop interface for rapid development</li>
+                                <li>Integration with backend workflows and APIs</li>
+                                <li>Responsive design for mobile and desktop</li>
                             </ul>
                         </div>
                         <div class="project-tech">
                             <span class="tech-badge">ServiceNow</span>
                             <span class="tech-badge">UI Builder</span>
                             <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SAM Project -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">Software Asset Management (SAM)</h3>
+                        <p class="project-overview">
+                            Implemented a SAM solution to track and manage software licenses, ensuring compliance and optimizing costs.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>License tracking and compliance reporting</li>
+                                <li>Integration with CMDB for real-time asset tracking</li>
+                                <li>Automated workflows for license renewal</li>
+                                <li>Custom dashboards for asset visibility</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">SAM</span>
+                            <span class="tech-badge">CMDB</span>
+                            <span class="tech-badge">Workflow Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HAM Project -->
+                <div class="col-lg-6">
+                    <div class="project-card glass-card hover-glow">
+                        <h3 class="project-title">Hardware Asset Management (HAM)</h3>
+                        <p class="project-overview">
+                            Designed and implemented a HAM solution to track and manage hardware assets, improving visibility and lifecycle management.
+                        </p>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Hardware asset tracking and lifecycle management</li>
+                                <li>Integration with procurement and disposal workflows</li>
+                                <li>Custom reports for asset utilization</li>
+                                <li>Automated alerts for warranty expirations</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">ServiceNow</span>
+                            <span class="tech-badge">HAM</span>
+                            <span class="tech-badge">CMDB</span>
+                            <span class="tech-badge">Workflow Automation</span>
                         </div>
                     </div>
                 </div>
@@ -246,7 +330,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section class="skills-section">
         <div class="container">
             <h2 class="section-title neon-text text-center mb-5">Skills</h2>
             <div class="row g-4">
@@ -267,9 +351,43 @@
                                 </div>
                                 <p>JavaScript</p>
                             </div>
+                            <div class="skill-badge" data-progress="85">
+                                <div class="pie-chart">
+                                    <span>85%</span>
+                                </div>
+                                <p>Python</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Frontend Technologies -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Frontend Technologies</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge" data-progress="80">
+                                <div class="pie-chart">
+                                    <span>80%</span>
+                                </div>
+                                <p>React</p>
+                            </div>
+                            <div class="skill-badge" data-progress="75">
+                                <div class="pie-chart">
+                                    <span>75%</span>
+                                </div>
+                                <p>Angular</p>
+                            </div>
+                            <div class="skill-badge" data-progress="90">
+                                <div class="pie-chart">
+                                    <span>90%</span>
+                                </div>
+                                <p>Bootstrap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Tools -->
                 <div class="col-md-6">
                     <div class="skill-category glass-card hover-glow">
@@ -287,6 +405,39 @@
                                 </div>
                                 <p>Git</p>
                             </div>
+                            <div class="skill-badge" data-progress="90">
+                                <div class="pie-chart">
+                                    <span>90%</span>
+                                </div>
+                                <p>VS Code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="col-md-6">
+                    <div class="skill-category glass-card hover-glow">
+                        <h3 class="category-title">Other Skills</h3>
+                        <div class="skill-badges">
+                            <div class="skill-badge" data-progress="85">
+                                <div class="pie-chart">
+                                    <span>85%</span>
+                                </div>
+                                <p>REST APIs</p>
+                            </div>
+                            <div class="skill-badge" data-progress="90">
+                                <div class="pie-chart">
+                                    <span>90%</span>
+                                </div>
+                                <p>ITSM</p>
+                            </div>
+                            <div class="skill-badge" data-progress="80">
+                                <div class="pie-chart">
+                                    <span>80%</span>
+                                </div>
+                                <p>ITAM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -302,108 +453,161 @@
                 <!-- Contact Form -->
                 <div class="col-lg-6">
                     <div class="contact-form glass-card hover-glow">
-                        <form id="contact-form">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-glow">Send Message</button>
-                        </form>
-                    </div>
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Contact Form</title>
+
+                            <!-- Required CSS/JS links -->
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+                            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                        </head>
+                        <body>
+
+                            <!-- Contact Form -->
+                            <form id="contact-form" class="p-4" style="max-width: 500px; margin: 0 auto;">
+                                <!-- Name Input -->
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text"
+                                           class="form-control"
+                                           name="from_name"
+                                           required>
+                                </div>
+
+                                <!-- Email Input -->
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email"
+                                           class="form-control"
+                                           name="from_email"
+                                           required>
+                                </div>
+
+                                <!-- Message Input -->
+                                <div class="mb-3">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control"
+                                              name="message"
+                                              rows="5"
+                                              required></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary">
+                                    Send Message
+                                </button>
+                            </form>
                 </div>
-                <!-- Contact Info -->
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="info-card glass-card hover-glow">
-                            <i class="fas fa-envelope"></i>
-                            <p>shahrukh@example.com</p>
-                        </div>
-                        <div class="info-card glass-card hover-glow">
-                            <i class="fas fa-phone"></i>
-                            <p>+91 9110344452</p>
-                        </div>
-                        <div class="info-card glass-card hover-glow">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>Spring Hill, Tennessee, USA</p>
-                        </div>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-lg-6">
+                <div class="contact-info">
+                    <div class="info-card glass-card hover-glow">
+                        <i class="fas fa-envelope"></i>
+                        <p>180031189cse@gmail.com</p>
+                    </div>
+                    <div class="info-card glass-card hover-glow">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 4706592055</p>
+                    </div>
+                    <div class="info-card glass-card hover-glow">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Spring Hill, Tennessee, USA</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer Section -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Column 1: Logo & Short Bio -->
-                <div class="col-lg-4">
-                    <div class="footer-column">
-                        <img src="logo.png" alt="Logo" class="footer-logo">
-                        <p class="footer-bio">
-                            A passionate IT professional with expertise in ServiceNow development, web development, and cloud solutions. Let's build something amazing together!
-                        </p>
-                    </div>
-                </div>
-                <!-- Column 2: Quick Links -->
-                <div class="col-lg-4">
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Quick Links</h3>
-                        <ul class="footer-links">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Column 3: Contact Information -->
-                <div class="col-lg-4">
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Contact Info</h3>
-                        <ul class="footer-contact">
-                            <li><i class="fas fa-envelope"></i> shahrukh@example.com</li>
-                            <li><i class="fas fa-phone"></i> +91 9110344452</li>
-                        </ul>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Column 1: Logo & Short Bio -->
+            <div class="col-lg-4">
+                <div class="footer-column">
+                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <p class="footer-bio">
+                        A passionate IT professional with expertise in ServiceNow development, web development, and cloud solutions. Let's build something amazing together!
+                    </p>
                 </div>
             </div>
-            <!-- Copyright Notice -->
-            <div class="footer-bottom text-center">
-                <p class="copyright">© 2024 Shah Rukh Syed. All Rights Reserved.</p>
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-4">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- Scroll-to-Top Button -->
-            <div class="scroll-to-top">
-                <a href="#top" class="btn btn-primary btn-glow"><i class="fas fa-arrow-up"></i></a>
+            <!-- Column 3: Contact Information -->
+            <div class="col-lg-4">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> 180031189cse@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +1 4706592055</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+        <!-- Copyright Notice -->
+        <div class="footer-bottom text-center">
+            <p class="copyright">© 2024 Shah Rukh Syed. All Rights Reserved.</p>
+        </div>
+        <!-- Scroll-to-Top Button -->
+        <div class="scroll-to-top">
+            <a href="#top" class="btn btn-primary btn-glow"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </div>
+</footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- EmailJS Integration -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init('1JmKG3aVuI9IZU1Xm'); // Your EmailJS public key
-        })();
-    </script>
-    <!-- Custom JS -->
-    <script src="script2.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- EmailJS Setup -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    // Initialize with your public key
+    emailjs.init("1JmKG3aVuI9IZU1Xm");
+
+    // Form submission handler
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+
+        btn.disabled = true;
+        btn.innerHTML = `<span class="spinner-border spinner-border-sm"></span> Sending...`;
+
+        emailjs.sendForm('service_zgw1rpy', 'template_sfb0d48', this)
+            .then(() => {
+                Swal.fire('Success!', 'Message sent successfully!', 'success');
+                this.reset();
+            })
+            .catch(() => {
+                Swal.fire('Error!', 'Failed to send message', 'error');
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
+            });
+    });
+</script>
+
+
 </body>
 </html>
