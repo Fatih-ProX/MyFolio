@@ -1,4 +1,4 @@
-﻿/* General Styles */
+/* General Styles */
 :root {
     --glass-color: rgba(255, 255, 255, 0.1);
     --glow-color: rgba(255, 255, 255, 0.3);
@@ -45,12 +45,78 @@ body {
     padding: 15px 0;
 }
 
+/* Navbar Brand Fix */
 .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white !important;
-    text-shadow: 0 0 10px var(--glow-color);
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
 }
+
+.brand-main {
+    background: linear-gradient(45deg, #00ff88, #61dafb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+    position: relative;
+    z-index: 2;
+    margin-right: 8px;
+}
+
+.brand-glitch {
+    color: #00ff88;
+    position: relative;
+    animation: glitch 2s infinite;
+    opacity: 0.9;
+    font-size: 1.4rem;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0)
+    }
+
+    20% {
+        transform: translate(-1px, 1px)
+    }
+
+    40% {
+        transform: translate(1px, -1px)
+    }
+
+    60% {
+        transform: translate(-1px, 1px)
+    }
+
+    80% {
+        transform: translate(1px, -1px)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+/* Toggler Fix */
+.navbar-toggler {
+    border: 1px solid rgba(0, 255, 136, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 255, 136, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hover Effects */
+.navbar-brand:hover .brand-main {
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.navbar-brand:hover .brand-glitch {
+    animation: glitch 0.5s infinite;
+}
+
 
 .nav-link {
     color: white !important;
@@ -107,7 +173,6 @@ body {
         margin: 10px 0;
     }
 }
-
 /* Hero Section */
 .hero-section {
     height: 100vh;
@@ -116,7 +181,7 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
 }
 
 .particles-background {
@@ -125,7 +190,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.1) 0%, rgba(97, 218, 251, 0.1) 100% );
+    z-index: 1;
 }
 
 .hero-content {
@@ -136,14 +202,15 @@ body {
 
 .hero-name {
     font-size: 4rem;
-    color: #fff;
+    color: #00ff88;
     margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
     animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-description {
     font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 40px;
     animation: fadeInUp 1s ease-in-out;
 }
@@ -152,36 +219,76 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 40px;
     animation: fadeInUp 1s ease-in-out;
 }
 
 .btn-glow {
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-    .btn-glow:hover {
-        box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-        transform: translateY(-5px);
-    }
+.btn-primary.btn-glow {
+    background: #00ff88;
+    color: #1a1a1a;
+    border: none;
+}
+
+.btn-outline-light.btn-glow {
+    border: 2px solid #00ff88;
+    color: #00ff88;
+}
+
+.btn-glow:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+}
 
 .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
-    margin-top: 40px;
-    animation: fadeInUp 1s ease-in-out;
 }
 
 .social-icon {
+    font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.5rem;
-    transition: color 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
 }
 
     .social-icon:hover {
         color: #00ff88;
         transform: translateY(-5px);
+        text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
     }
+
+/* Hero Section Fix */
+.job-role-container {
+    height: 60px; /* Adjust based on your font size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.2;
+    min-width: 300px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: white;
+    margin-left: 2px;
+    height: 1.3em; /* Match text height */
+    vertical-align: middle;
+    animation: blink 1s infinite;
+}
 
 /* Animations */
 @keyframes fadeInDown {
@@ -211,106 +318,102 @@ body {
 /* About Me Section */
 .about-section {
     padding: 80px 0;
-    background: url('about-bg.jpg') no-repeat center center/cover;
-    position: relative;
-    overflow: hidden;
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
 }
 
 .profile-card {
     position: relative;
     text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .profile-img {
     width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.profile-card:hover .profile-img {
-    transform: scale(1.05);
+.resume-download {
+    margin-top: 20px;
 }
 
-.glow-border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #00ff88;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.profile-card:hover .glow-border {
-    opacity: 1;
+.lead-text {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    border-left: 3px solid #00ff88;
+    padding-left: 20px;
 }
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .achievement-card {
-    text-align: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
     .achievement-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 255, 136, 0.1);
     }
 
     .achievement-card i {
         font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
+        color: #00ff88;
     }
 
-    .achievement-card h3 {
-        font-size: 1.5rem;
-        color: white;
-        margin-bottom: 10px;
-    }
+.achievement-content h3 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
 
-    .achievement-card p {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 14px;
-    }
+.achievement-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.95rem;
+}
 
-.tech-stack {
-    display: flex;
-    gap: 20px;
+.expertise {
     margin-top: 30px;
 }
 
-.tech-icon {
-    font-size: 2rem;
-    color: white;
-    transition: color 0.3s, transform 0.3s;
+.expertise-title {
+    color: #61dafb;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
-    .tech-icon:hover {
-        color: #00ff88;
-        transform: translateY(-5px);
-    }
+.expertise-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-.tech-logo {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0) invert(1); /* Make logos white */
+.expertise-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Education Section */
@@ -850,3 +953,5 @@ body {
             transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(79, 195, 247, 0.8);
         }
+
+
