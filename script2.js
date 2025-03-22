@@ -113,34 +113,36 @@ document.querySelector('.scroll-to-top a').addEventListener('click', (e) => {
 });
 
 
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
 
-    const submitBtn = this.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Sending...';
+// Background Image Carousel
+const carouselItems = document.querySelectorAll('.carousel-item');
+let currentItem = 0;
 
-    emailjs.sendForm('service_zgw1rpy', 'template_3cxohs2', this)
-        .then(() => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Message Sent!',
-                text: 'Thank you! I will respond within 24 hours.',
-                confirmButtonColor: '#00ff88'
-            });
-            this.reset();
-        })
-        .catch((error) => {
-            Swal.fire({
-                icon: 'error',
-                title: 'Sending Failed',
-                text: 'Please try again or connect via LinkedIn',
-                confirmButtonColor: '#ff4444'
-            });
-        })
-        .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Send Message';
-        });
+const showNextImage = () => {
+    // Hide the current image
+    carouselItems[currentItem].classList.remove('active');
+
+    // Move to the next image
+    currentItem = (currentItem + 1) % carouselItems.length;
+
+    // Show the next image
+    carouselItems[currentItem].classList.add('active');
+};
+
+// Start the carousel
+setInterval(showNextImage, 5000); // Change image every 5 seconds
+
+// Initialize the first image
+carouselItems[currentItem].classList.add('active');
+
+
+//pie chart
+document.querySelectorAll('.skill-badge').forEach(badge => {
+    const progress = badge.dataset.progress;
+    const pieChart = badge.querySelector('.pie-chart');
+    pieChart.style.background = `conic-gradient(
+        #00ff88 ${progress}%,
+        rgba(255, 255, 255, 0.1) ${progress}% 100%
+    )`;
 });
 
